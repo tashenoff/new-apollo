@@ -13,7 +13,7 @@ static
 __pycache__
 db.sqlite3
 media
-
+local_settings.py
 
 # Backup files # 
 *.bak 
