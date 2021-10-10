@@ -2,9 +2,8 @@
 *~
 __pycache__
 my-venv
-static
 .DS_Store
-
+staticfiles
 
 # Django #
 *.log
