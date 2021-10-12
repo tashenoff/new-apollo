@@ -13,4 +13,7 @@ pytz==2021.1
 readtime==1.1.1
 soupsieve==2.2.1
 sqlparse==0.4.1
+<<<<<<< HEAD
+=======
 gunicorn==20.1.0
+>>>>>>> 4c517cc229f1992b410b51b88d53ed51c9ce857a

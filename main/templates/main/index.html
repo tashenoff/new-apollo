@@ -27,11 +27,10 @@
 
             <div class="text-center flex flex-col items-center relative z-50">
                 <h1 class="home__title lg:text-8xl text-3x1 mb-5">Создание сайтов</h1>
-                <h2 class="text-2xl">Мы разрабатываем сайты любой сложности под ключ и помогаем делать бизнес лучше!
-                    dicta, </h2>
-                <button @click="isDialogOpen = true"
-                    class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-full mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
-                    Получить адекватную рассценку</button>
+                <h2 class="text-2xl lg:p-0 p-5">Разрабатываем качественные, адаптивные сайты и оказываем полный комплекс услуг по продвижению бизнеса в интернете. </br>Экспертно. Выгодно. Результативно </h2>
+                <a href="form"
+                    class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-lg mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
+                   Оставить заявку</a>
 
             </div>
 
@@ -57,10 +56,10 @@
     <div class="container  mx-auto">
         <div class="flex flex-col items-center w-full">
             <h1
-                class="home__sub-title text-5xl bg-clip-text text-transparent bg-gradient-to-br dark:from-green from-black to-primary dark:to-blueLight p-2">
+                class="home__sub-title text-5xl text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-green from-black to-primary dark:to-blueLight p-2">
                 Ключевые направления</h1>
             <div class="w-10 h-1 bg-secondary mt-5"></div>
-            <p class="py-10 w-full text-center dark:text-white text-black">Digital Агентство CASTCOM с 2007 года
+            <p class="lg:px-0 px-5 py-10 w-full text-center dark:text-white text-black">Digital Агентство CASTCOM с 2007 года
                 занимается разработкой сайтов для бизнеса любой сложности. За все время мы создали и запустили 300+
                 крупных успешных проектов: от лендингов до порталов, которые помогли нашим заказчикам вывести бизнес на
                 новый уровень.
@@ -79,7 +78,7 @@
                     <div class="w-60 h-60 bg-primary absolute z-0 -bottom-10 -right-10 rounded-full"></div>
                     <div class="w-10 h-10 bg-primary absolute z-0 -bottom-10 -right-20 rounded-full"></div> -->
                 <div
-                    class="z-50 bg-white flex dark:bg-primary flex-col items-center border border-white lg:mb-5 dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
+                    class="z-50 bg-white lg:mx-0 mx-5 flex dark:bg-primary flex-col items-center border border-white lg:mb-5 dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
 
                     <div
                         class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br  dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
@@ -94,7 +93,7 @@
                         empowered.</p>
                 </div>
                 <div
-                    class="bg-white dark:bg-primary flex flex-col items-center border lg:mt-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
+                    class="bg-white lg:mx-0 mx-5 dark:bg-primary flex flex-col items-center border lg:mt-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
                     <div
                         class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
                         <img src="{% static '/img/icons/7.svg' %}" alt="">
@@ -107,7 +106,7 @@
                         empowered.</p>
                 </div>
                 <div
-                    class="dark:bg-primary z-50 bg-white flex flex-col items-center border mb-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
+                    class=" lg:mx-0 mx-5 dark:bg-primary z-50 bg-white flex flex-col items-center border mb-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
                     <div
                         class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
                         <img src="{% static '/img/icons/6.svg' %}" alt="">
@@ -168,9 +167,8 @@
                                 class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 ">
                                 <div class="z-60 relative  flex flex-col items-center content-between">
                                     <div class="flex flex-col items-center mb-5">
-                                        <div
-                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                            <img src="./assets/img/icons/8.svg" alt="">
+                                        <div class="pb-5">
+                                            <img src="{% static '/img/icons/1.svg' %}" alt="">
                                         </div>
 
                                         <h1 class="text-lg card__title dark:text-green transition">Landing Page
@@ -188,10 +186,10 @@
                                     </p>
 
                                     <div class="flex flex-col w-full items-center mt-5">
-                                        <button @click="isDialogOpen = true"
+                                        <a href="form"
                                             class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
                                             Оставить заявку
-                                        </button>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -205,9 +203,8 @@
                                 class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 transition ">
                                 <div class="z-60 relative  flex flex-col items-center content-between">
                                     <div class="flex flex-col items-center mb-5">
-                                        <div
-                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                            <img src="./assets/img/icons/8.svg" alt="">
+                                        <div class="pb-5">
+                                            <img src="{% static '/img/icons/2.svg' %}" alt="">
                                         </div>
 
                                         <h1 class="text-lg card__title dark:text-green transition">Сайт визитка
@@ -225,10 +222,10 @@
                                     </p>
 
                                     <div class="flex flex-col w-full items-center mt-5">
-                                        <button @click="isDialogOpen = true"
+                                        <a href="form"
                                             class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
                                             Оставить заявку
-                                        </button>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -241,9 +238,8 @@
                                 class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 ">
                                 <div class="z-60 relative  flex flex-col items-center content-between">
                                     <div class="flex flex-col items-center mb-5">
-                                        <div
-                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                            <img src="./assets/img/icons/8.svg" alt="">
+                                        <div class="pb-5">
+                                            <img src="{% static '/img/icons/3.svg' %}" alt="">
                                         </div>
 
                                         <h1 class="text-lg card__title dark:text-green transition">Интернет магазин
@@ -261,10 +257,10 @@
                                     </p>
 
                                     <div class="flex flex-col w-full items-center mt-5">
-                                        <button @click="isDialogOpen = true"
+                                        <a href="form"
                                             class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
                                             Оставить заявку
-                                        </button>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -278,9 +274,8 @@
                                 class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 ">
                                 <div class="z-60 relative  flex flex-col items-center content-between">
                                     <div class="flex flex-col items-center mb-5">
-                                        <div
-                                            class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-green dark:to-green bg-gray p-5">
-                                            <img src="./assets/img/icons/8.svg" alt="">
+                                        <div class="pb-5">
+                                            <img src="{% static '/img/icons/4.svg' %}" alt="">
                                         </div>
 
                                         <h1 class="text-lg card__title dark:text-green transition">Корпоративный
@@ -298,10 +293,10 @@
                                     </p>
 
                                     <div class="flex flex-col w-full items-center mt-5">
-                                        <button @click="isDialogOpen = true"
+                                        <a href="form"
                                             class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
                                             Оставить заявку
-                                        </button>
+                                    </a>
                                     </div>
                                 </div>
                             </div>
@@ -352,7 +347,7 @@
                 <span class="font-bold uppercase"> Вкусный кофе</span>
             </div>
             <div class="div bg-white p-10 text-black shadow-xl rounded-lg flex items-center">
-                <span class="text-2xl mr-5">☕</span>
+                <span class="text-2xl mr-5">👏</span>
                 <span class="font-bold uppercase"> Программист экстраверт</span>
             </div>
             <!-- <div class="div bg-white p-10 text-black rounded-lg flex items-center">
@@ -374,17 +369,16 @@
             <h1 class="lg:text-4xl text-3x1 home__sub-title text-black dark:text-white mb-10">Наши работы</h1>
         </div>
 
-        <div class="grid grid-cols-5 gap-4">
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
-            <div class="div"><img src="//via.placeholder.com/400x300"></div>
+        <div class="grid grid-cols-1 lg:grid-cols-4  gap-4">
+            <div class="div"><a href="https://ordaplast.kz/"><img src="https://images.unsplash.com/photo-1570563918646-174e6dece0df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"></a></div>
+            <div class="div"><a href="http://uzb.kz/"><img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"></a></div>
+            <div class="div"><a href="http://stia.kz/"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"></a></div>
+            <div class="div"><a href="https://sauna-zhanarys-ast.kz/"><img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"></a></div>
+            <div class="div"><a href="http://ordatrans.kz/"><img src="https://images.unsplash.com/photo-1614976523626-d598aafd4fda?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80"></a></div>
+            <div class="div"><a href="https://rem-plast.kz/"><img src="https://images.unsplash.com/photo-1481467804160-3cdf91aa1ac4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2071&q=80"></a></div>
+            <div class="div"><a href="https://fontanero.kz/ru/"><img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"></a></div>
+            <div class="div"><a href="http://skincareshop.kz/"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80"></a></div>
+            
         </div>
 
 
@@ -422,13 +416,12 @@
         <div class="flex flex-col items-center w-full pb-10">
 
             <h1 class="lg:text-4xl text-3x1 home__sub-title">Остались вопросы?</h1>
-            <p class="py-10 w-1/2 text-center sub-title ">Оставьте свои контактные данные и мы гарантируем вам,
+            <p class="py-10 px-5 lg:w-1/2 w-full text-center sub-title ">Оставьте свои контактные данные и мы гарантируем вам,
                 что
                 вы получите самую лучшую консультацию!</p>
 
-            <button @click="isDialogOpen = true"
-                class="focus:outline-none py-4 px-6 bg-green lg:w-1/1 text-black w-1/1 rounded-full uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
-                Получить адекватную рассценку</button>
+            <a href="form" class="focus:outline-none py-4 px-6 bg-secondary text-white lg:w-1/1 text-black w-1/1 rounded-lg uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
+                Оставить заявку</a>
         </div>
 
 
@@ -438,24 +431,5 @@
 
 
 </div>
-<!-- overlay -->
 
-<script>
-// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "30px 10px";
-    document.getElementById("logo").style.fontSize = "25px";
-  } else {
-    document.getElementById("navbar").style.padding = "80px 10px";
-    document.getElementById("logo").style.fontSize = "35px";
-  }
-}
-</script>
-
-<footer class="bg-primary flex items-center justify-center">
-    <span class="uppercase tracking-widest text-white">Apollo.kz все права защищены</span>
-</footer>
 {% endblock content %}
