@@ -125,6 +125,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+ALLOWED_HOSTS = ['192.168.0.17']
+
 CKEDITOR_CONFIGS = {
     "default": {
         "removePlugins": "stylesheetparser",
@@ -140,3 +142,13 @@ try:
 except ImportError:
     from .prod_settings import *
 # Application definition
+
+EMAIL_BACKEND  = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.yandex.kz'
+RECIPIENTS_EMAIL = ['wmiracle@inbox.ru'] 
+DEFAULT_FROM_EMAIL = 'abay@intermedia.kz'
+EMAIL_HOST_USER = 'abay@intermedia.kz'
+EMAIL_HOST_PASSWORD = 'ncrzwhroaytzupdz'
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False

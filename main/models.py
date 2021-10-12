@@ -4,6 +4,11 @@ from django.dispatch import receiver
 from django.contrib.auth import get_user_model
 from customer.models import Customer
 from service.models import MainService
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from django.core.mail import send_mail
+from django.http import Http404
+from django.conf import settings
 # Create your models here.
 
 # FirstName
@@ -38,5 +43,26 @@ class Main(models.Model):
         verbose_name_plural = 'Заказы'
         verbose_name = 'Заказ'
 
+@receiver(post_save, sender=Main)
+def send_email_new_order(sender, instance, created, **kwargs):
 
+    # if a new officer is created, compose and send the email
+    if created:
+        name = instance.сustomer.firstName
+        phone = instance.сustomer.phone
+        service = instance.main_service.main_service_name
+        print(service)
+
+        subject = 'Новый заказа с сайта apollo --- Имя: {0}, Номер телефона: {1}, Услуга: {2}'.format(name, phone, service)
+        message = 'Новый заказ\n'
+        message += 'Имя: ' + name + '\n' + 'Номер телефона: ' + phone + '\n'+ 'Услуга:'+ service +'\n'
+        message += '--' * 30
+
+        send_mail(
+            subject,
+            message,
+            settings.DEFAULT_FROM_EMAIL,
+            settings.RECIPIENTS_EMAIL,
+            fail_silently=False,
+        )
         

@@ -9,4 +9,5 @@ app_name = 'main'
 urlpatterns = [
 path('', views.index, name='index'),
 path('form', views.form, name='form'),
+path('thanks', views.thanksForm, name='thanks'),
 ]

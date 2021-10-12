@@ -5,11 +5,25 @@
     /* Путь к файлу со шрифтом */
 }
 
-
 [x-cloak] {
     display: none !important;
 }
 
+.pholio__item:hover ::before {
+    background-color: #e9e9e9;
+    content: '';
+    position: absolute;
+    z-index: 60;
+}
+
+.thanks-input input {
+    width: 100%;
+    background-color: #e9e9e9;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    
+}
 
 .home__title {
     font-size: 80px;
@@ -20,28 +34,27 @@
     color: transparent;
 }
 
-
-.bg-marketing{
-    background-image: url('https://images.unsplash.com/photo-1593462475357-67ac85ec71a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+.bg-marketing {
+    background-image: url('/staticfiles/img/bg/1.jpg');
     position: relative;
 }
 
-.bg-marketing::before{
+.bg-marketing::before {
     content: '';
     background-color: rgb(0 0 0 / 60%);
     width: 100%;
     height: 100%;
     z-index: 0;
-    top:0;
+    top: 0;
     position: absolute;
 }
 
-.bg-offer{
-    background-image: url('https://images.unsplash.com/photo-1552083940-86877723de7a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+.bg-offer {
+    background-image: url('/staticfiles/img/bg/2.jpg');
     position: relative;
 }
 
-.bg-offer::before{
+.bg-offer::before {
     content: '';
     background-color: rgb(0 0 0 / 60%);
     width: 100%;
@@ -62,51 +75,29 @@ body {
     width: 35%;
 }
 
-.custom-news-bg{
+.custom-news-bg {
     background-color: #F5F5F5;
-  }
-
-.statistic {
-    background-image: url('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-    position: relative;
-}
-
-.statistic::before {
-    content: '';
-    background-color: rgb(51 53 189 / 82%);
-    width: 100%;
-    height: 100%;
-    z-index: 50;
-    position: absolute;
 }
 
 .home {
-
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1557264322-b44d383a2906?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
-
-
+    background-image: url('/staticfiles/img/bg/3.jpg');
 }
 
 .home_marketing {
-
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1600627225432-82de96999068?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80');
+    background-image: url('/staticfiles/img/bg/4.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
     background-color: #fff;
     background-position-y: center;
     background-attachment: fixed;
     height: 100%;
     width: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
-
 }
-
 
 .home_marketing:before {
     content: '';
@@ -120,16 +111,14 @@ body {
 }
 
 .home__background {
-    background-image: url('https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80');
+    background-image: url('/staticfiles/img/bg/5.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-
     background-color: #fff;
     background-position-y: center;
     background-attachment: fixed;
     height: 100%;
     width: 100%;
-
     position: absolute;
     top: 0;
     left: 0;
@@ -140,6 +129,7 @@ body {
         background-position-y: center;
     }
 }
+
 /* 
 .nav {
     position: fixed;
@@ -152,7 +142,7 @@ body {
 nav.scroll {
     background-color: #A1572F;
     color: #eef;
-  }
+}
 
 .scroll {
     background-color: transparent;
@@ -194,7 +184,7 @@ nav.scroll {
 
 @media only screen and (max-width: 600px) {
     .home__title {
-        font-size: 42px;
+        font-size: 44px;
     }
 }
 
@@ -396,18 +386,15 @@ footer {
     padding: 0 20px;
 }
 
-
-
 /* Zoom in Keyframes */
+
 @-webkit-keyframes zoomin {
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.5);
     }
-
     100% {
         transform: scale(1);
     }
@@ -417,11 +404,9 @@ footer {
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.5);
     }
-
     100% {
         transform: scale(1);
     }
@@ -430,15 +415,14 @@ footer {
 /*End of Zoom in Keyframes */
 
 /* Zoom out Keyframes */
+
 @-webkit-keyframes zoomout {
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(0.67);
     }
-
     100% {
         transform: scale(1);
     }
@@ -448,18 +432,15 @@ footer {
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(0.67);
     }
-
     100% {
         transform: scale(1);
     }
 }
 
 /*End of Zoom out Keyframes */
-
 
 .post-image {
     position: relative;
