@@ -145,7 +145,7 @@ except ImportError:
 
 EMAIL_BACKEND  = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.kz'
-RECIPIENTS_EMAIL = ['alisher_bu@mail.ru'] 
+RECIPIENTS_EMAIL = ['alisher_bu@mail.ru', 'wmiracle@inbox.ru'] 
 DEFAULT_FROM_EMAIL = 'abay@intermedia.kz'
 EMAIL_HOST_USER = 'abay@intermedia.kz'
 EMAIL_HOST_PASSWORD = 'ncrzwhroaytzupdz'

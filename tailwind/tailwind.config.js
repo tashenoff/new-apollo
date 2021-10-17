@@ -4,7 +4,7 @@ module.exports = {
       purgeLayersByDefault: true,
   },
   purge: {
-      enabled: false, //true for production build
+      enabled: true, //true for production build
       content: [
           '../**/templates/*.html',
           '../**/templates/**/*.html'
@@ -12,6 +12,17 @@ module.exports = {
   },
   darkMode: 'class',
   theme: {
+
+    borderRadius: {
+      'none': '0',
+     'sm': '0.125rem',
+     DEFAULT: '0.25rem',
+     DEFAULT: '4px',
+     'md': '0.375rem',
+     'lg': '0.3rem',
+     'full': '9999px',
+     'large': '12px',
+    },
       
     container: {
         screens: {
@@ -32,7 +43,9 @@ module.exports = {
         darkLight: '#0c162d',
         primarylight: '#9361e2',
         secondary: '#e045e6',
+        secondaryLight: '#dc31e3',
         green: '#47E189',
+        greenDark: '#42cf7e',
         black: '#333',
         white: '#fff',
         red: '#e045e6',

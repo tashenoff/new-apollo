@@ -1,0 +1,41 @@
+{% load static %}
+<div
+    class="flex text-black w-full justify-center lg:px-0 z-60  mx-auto delay-100 transition-colors duration-300 ease-in-out ">
+
+
+
+
+    <div class="lg:px-10 flex w-full items-center text-white fixed z-60 dark:bg-primary text-black shadow-md border-b border-white border-opacity-25"
+        x-data="{ atTop: true }" :class="{ 'bg-primary bg-opacity-90 ' : !atTop }"
+        @scroll.window="atTop = (window.pageYOffset > 40) ? false : true">
+        <div class="navbar w-full flex justify-center dark:text-white">
+            <nav class="flex items-center lg:px-0 px-2 justify-between relative z-40 flex-wrap py-6 fixed w-full top-0"
+                x-data="{ isOpen: false }" @keydown.escape="isOpen = false"
+                :class="{ 'shadow-lg bg-transparent' : isOpen }">
+
+                <!--Logo etc-->
+                <div class="pl-5 flex items-center flex-shrink-0 text-white mr-6">
+                    <a class="logo" href="{% url 'main:index' %}">
+                        Apollo
+                    </a>
+                </div>
+
+                <div class="hidden lg:block">
+                    <span class="pr-5 uppercase font-bold">Остались вопросы?</span>
+                    <a href="tel:87757310715">8 775 731-07-15</a>
+                </div>
+
+
+                <div class="lg:hidden block font-bold ">
+
+
+                    <a href="tel:87757310715">8 775 731-07-15</a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+
+    </div>

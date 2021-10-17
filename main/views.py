@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from .forms import Feedback
 from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from django.http import Http404
 from django.conf import settings
 def form(request):
@@ -11,8 +13,14 @@ def form(request):
         if form.is_valid():
             form.save()
             try:
-                send_mail('Заявка с сайта', 'Вам пришло письмо, от имя: {0},\n номер: {1}  '.format(form.cleaned_data['firstName'], form.cleaned_data['phone']), 
-                settings.DEFAULT_FROM_EMAIL, settings.RECIPIENTS_EMAIL, fail_silently=False)
+                subject = 'Заявка с сайта'
+                form_data = form.cleaned_data
+                print(form_data)
+                html_message = render_to_string('main/mail.html', {'form_data': form_data})
+                plain_message = strip_tags(html_message)
+                from_email = settings.DEFAULT_FROM_EMAIL
+                to = settings.RECIPIENTS_EMAIL
+                send_mail(subject, plain_message, from_email, to, html_message=html_message)
             except Exception as err:
                 raise Http404("Ошибка", err)
             return redirect('main:thanks')

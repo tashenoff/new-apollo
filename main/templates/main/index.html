@@ -3,18 +3,17 @@
 
 {% block styles %}
 <link rel="stylesheet" href="{% static 'css/starts.css' %}" />
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
 {% endblock %}
 {% block content %}
 
 
 
-<section id="home" class="text-white dark:bg-primary dark:text-white home relative overflow-hidden ">
+<section id="home"
+    class="text-white dark:bg-primary dark:text-white home w-full relative overflow-hidden flex flex-col items-center ">
 
 
 
-    <div class="relative overflow-hidden flex flex-col items-center justify-center z-40 h-full">
+    <div class="relative w-full overflow-hidden flex flex-col items-center justify-center z-40 h-full">
         <div class="background absolute w-full top-0 left-0 z-50">
             <div class="star1 star"></div>
             <div class="star2 star"></div>
@@ -23,14 +22,15 @@
         </div>
 
 
-        <div class="w-100 h-full flex justify-center items-center relative z-60">
+        <div class="w-full h-full flex justify-center items-center relative z-60">
 
             <div class="text-center flex flex-col items-center relative z-50">
-                <h1 class="home__title lg:text-8xl text-3x1 mb-5">Создание сайтов</h1>
-                <h2 class="lg:text-2xl text-1x1 lg:p-0 p-5">Разрабатываем качественные, адаптивные сайты и оказываем полный комплекс
+                <h1 class="home__title lg:text-8xl text-3x1 mb-5 ">Создание сайтов</h1>
+                <h2 class="lg:text-2xl text-1x1 lg:p-0 p-5">Разрабатываем качественные, адаптивные сайты и оказываем
+                    полный комплекс
                     услуг по продвижению бизнеса в интернете. </br>Экспертно. Выгодно. Результативно </h2>
                 <a href="form"
-                    class="focus:outline-none py-4 px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-lg mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
+                    class="focus:outline-none py-4 hover:bg-secondaryLight transition-all px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-lg mt-10 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
                     Оставить заявку</a>
 
             </div>
@@ -44,9 +44,20 @@
 
 
 
-
-
-
+    <div
+        class="absolute bottom-10 z-50 border-t border-white absolute border-opacity-25 w-full flex items-center flex-col justify-center">
+        <div
+            class="p-5 transform rotate-45 border border-white border-opacity-25 relative -top-5 bg-primary flex items-center justify-center">
+            <div class="transform -rotate-45 absolute z-50">
+                <svg @click="$scroll('#about')" xmlns="http://www.w3.org/2000/svg"
+                    class="h-4 w-4 text-white  cursor-pointer  animate-bounce" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+            </div>
+        </div>
+    </div>
 
 
 </section>
@@ -73,56 +84,71 @@
         </div>
         <div class="relative">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-                <!-- <div class="w-60 h-60 bg-primary absolute z-0 -top-10 -left-10 rounded-full"></div>
-                    <div class="w-10 h-10 bg-primary absolute z-0 -top-10 -left-20 rounded-full"></div>
-                    <div class="w-60 h-60 bg-primary absolute z-0 -bottom-10 -right-10 rounded-full"></div>
-                    <div class="w-10 h-10 bg-primary absolute z-0 -bottom-10 -right-20 rounded-full"></div> -->
-                <div
-                    class="z-50 bg-white lg:mx-0 mx-5 flex dark:bg-primary flex-col items-center border border-white lg:mb-5 dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
 
-                    <div
-                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br  dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
-                        <img src="{% static '/img/icons/5.svg' %}" alt="">
+
+
+
+
+
+                <div class="card">
+                    <div class="img-container">
+                        <div class="skewed">
+                            <div class="img-marketing" id="img"></div>
+                        </div>
                     </div>
+                    <div class="content px-5 pb-5">
+                        <h2 class="py-5">Маркетинг</h2>
+                        <p>Apollo cоздает и ведет рекламные кампании в Google, Facebook, Instagram, тщательно
+                            мониторим ставки и снижаем стоимость конверсий, тем самым уменьшаем ваши затраты на
+                            рекламу и приводим вам максимально «дешевых» клиентов. Каждый создаваемый нами сайт
+                            оптимизирован под поисковые системы SEO, что позволяет нам привлекать органический
+                            трафик.
+                        </p>
 
-                    <span class="uppercase font-bold">Дизайн</span>
-
-                    <p class="mt-2 text-center dark:text-blueLight">Новые тренды объединяет общая тема: вместо того,
-                        чтобы фантазировать на тему высоких технологий, мы исследуем новые грани реализма. Они, как
-                        никогда раньше, смешивают цифровое и повседневное, и это отражает то, насколько сайты стали
-                        частью реальной жизни. Таким образом, тренды в веб-дизайне на 2021 год, о которых идет речь,
-                        буквально вдыхают новую жизнь в мир информационных технологий
-                    </p>
-                </div>
-                <div
-                    class="bg-white lg:mx-0 mx-5 dark:bg-primary flex flex-col items-center border lg:mt-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
-                    <div
-                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
-                        <img src="{% static '/img/icons/7.svg' %}" alt="">
                     </div>
-                    <span class="uppercase font-bold">Маркетинг</span>
-
-                    <p class="mt-2 text-center dark:text-blueLight">
-                        Apollo cоздает и ведет рекламные кампании в Google, Facebook, Instagram, тщательно мониторим
-                        ставки и снижаем стоимость конверсий, тем самым уменьшаем ваши затраты на рекламу и приводим вам
-                        максимально «дешевых» клиентов. Каждый создаваемый нами сайт оптимизирован под поисковые системы
-                        SEO, что позволяет нам привлекать органический трафик.
-
-                    </p>
                 </div>
-                <div
-                    class=" lg:mx-0 mx-5 dark:bg-primary z-50 bg-white flex flex-col items-center border mb-5 border-white dark:border-opacity-20 dark:text-white dark:border-white dark:text-black  rounded-lg p-5 shadow-xl">
-                    <div
-                        class="w-20 h-20 rounded-full mb-5  bg-gradient-to-br dark:from-gray from-gray to-white dark:to-green bg-gray p-5">
-                        <img src="{% static '/img/icons/6.svg' %}" alt="">
+
+
+
+
+                <div class="card">
+                    <div class="img-container">
+                        <div class="skewed">
+                            <div class="img-design" id="img"></div>
+                        </div>
                     </div>
-                    <span class="uppercase font-bold">Разработка</span>
+                    <div class="content px-5 pb-5">
+                        <h2 class="py-5">Дизайн</h2>
+                        <p>Новые тренды объединяет общая тема: вместо того, чтобы фантазировать на тему высоких
+                            технологий, мы исследуем новые грани реализма. Они, как никогда раньше, смешивают
+                            цифровое и повседневное, и это отражает то, насколько сайты стали частью реальной жизни.
+                            Таким образом, тренды в веб-дизайне на 2021 год, о которых идет речь, буквально вдыхают
+                            новую жизнь в мир информационных технологий</p>
 
-                    <p class="mt-2 text-center dark:text-blueLight">Сайты, порталы и интернет-магазины для любой сферы
-                        товаров и услуг. Делаем максимально функциональный и понятный дизайн, привязываем сервисы оплаты
-                        и доставки, реализуем актуальные digital-решения. Посетителям захочется покупать именно у Вас
-                    </p>
+                    </div>
                 </div>
+
+
+
+
+                <div class="card">
+                    <div class="img-container">
+                        <div class="skewed">
+                            <div class="img-code" id="img"></div>
+                        </div>
+                    </div>
+                    <div class="content px-5 pb-5">
+                        <h2 class="py-5">Разработка</h2>
+                        <p>Сайты, порталы и интернет-магазины для любой сферы товаров и услуг. Делаем максимально
+                            функциональный и понятный дизайн, привязываем сервисы оплаты и доставки, реализуем
+                            актуальные digital-решения. Посетителям захочется покупать именно у Вас
+                        </p>
+
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
 
@@ -164,151 +190,149 @@
 
             <div class="mb-20">
 
-                <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 px-5">
-                    <div
-                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-gray dark:border-white dark:border-opacity-20 ">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 ">
-                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                    <div class="flex flex-col items-center mb-5">
-                                        <div class="pb-5">
-                                            <img src="{% static '/img/icons/1.svg' %}" alt="">
-                                        </div>
+                <div class="">
 
-                                        <h1 class="text-lg card__title dark:text-green transition">Landing Page
-                                        </h1>
-                                    </div>
+                    <div class="flex items-stretch lg:flex-row flex-col">
+                        <div class="flex lg:w-1/4 w-100 rounded-lg bg-white relative z-50 text-primary lg:m-3 m-4">
+                            <div class="flex flex-col justify-between items-center  p-5">
+
+
+
+                                <div class="pb-5">
+                                    <img src="{% static '/img/icons/1.svg' %}" alt="">
+                                </div>
+                                <div class="div">
+                                    <h1 class="text-lg card__title mb-5">Landing Page
+                                    </h1>
+                                </div>
+
+                                <div class="div">
+
                                     <p
-                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5 transition">
-                                        Позволяет Вашим клиентам
-                                        оплачивать
-                                        товары/услуги
-                                        в любое время и с любой точки мира на Ваш
-                                        корпоративный счет, благодаря
-                                        чему
-                                        продажи компании в онлайн становятся бесперебойными.
+                                        class="text-sm text-center pb-5">
+                                        Веб-сайт разработанный на html и css, без подключения cms. Простейший сайт в
+                                        котором кратко рассказывается о деятельности компании и ее преимущества.
+                                        Создание такого одностраничного ресурса у нас занимает 5-7 дней.
+                                    </p>
+                                </div>
+
+                                <div class=" border-t w-full flex justify-center border-black border-opacity-20">
+                                    <a href="form"
+                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                        Оставить заявку
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex lg:w-1/4 w-100 rounded-lg bg-white relative z-50 text-primary lg:m-3 m-4">
+                            <div class="flex flex-col justify-between items-center  p-5">
+
+
+
+                                <div class="pb-5">
+                                    <img src="{% static '/img/icons/2.svg' %}" alt="">
+                                </div>
+                                <div class="div">
+
+                                    <h1 class="text-lg card__title mb-3">Сайт-визитка
+                                    </h1>
+                                </div>
+                                <div class="div">
+
+                                    <p
+                                        class="text-sm text-center pb-5">
+                                        Интернет сайт, который заказывают компании в Алматы которые работают на рынке
+                                        небольшое время, либо не имею острой потребности в полноценной онлайн платформе
                                     </p>
 
-                                    <div class="flex flex-col w-full items-center mt-5">
-                                        <a href="form"
-                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                            Оставить заявку
-                                        </a>
-                                    </div>
                                 </div>
+                                <div class=" border-t w-full flex justify-center border-black border-opacity-20">
+                                    <a href="form"
+                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                        Оставить заявку
+                                    </a>
+                                </div>
+
                             </div>
+
                         </div>
-                    </div>
 
-                    <div
-                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-gray dark:border-white dark:border-opacity-20 ">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 transition ">
-                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                    <div class="flex flex-col items-center mb-5">
-                                        <div class="pb-5">
-                                            <img src="{% static '/img/icons/2.svg' %}" alt="">
-                                        </div>
+                        <div class="flex lg:w-1/4 w-100 rounded-lg bg-white relative z-50 text-primary lg:m-3 m-4">
+                            <div class="flex flex-col justify-between items-center p-5">
 
-                                        <h1 class="text-lg card__title dark:text-green transition">Сайт визитка
-                                        </h1>
-                                    </div>
-                                    <p
-                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5 transition">
-                                        Позволяет Вашим клиентам
-                                        оплачивать
-                                        товары/услуги
-                                        в любое время и с любой точки мира на Ваш
-                                        корпоративный счет, благодаря
-                                        чему
-                                        продажи компании в онлайн становятся бесперебойными.
+
+
+                                <div class="pb-5">
+                                    <img src="{% static '/img/icons/4.svg' %}" alt="">
+                                </div>
+                                <div class="div">
+                                    <h1 class="text-lg card__title mb-3">Корпоративный сайт
+                                    </h1>
+                                </div>
+                                <div class="div">
+                                    <p class="text-sm text-center pb-5">
+                                        На сайте данного типа есть возможность подробно рассказать о всех особенностях
+                                        компании, ее достоинствах, лицензиях и опыте работы. А премиальный
+                                        индивидуальный
+                                        дизайн сайта не только позволит правильно расставить акценты, но и выделиться
+                                        среди
+                                        серой массы конкурентов
                                     </p>
-
-                                    <div class="flex flex-col w-full items-center mt-5">
-                                        <a href="form"
-                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                            Оставить заявку
-                                        </a>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-gray border-opacity-20 dark:border-white dark:border-opacity-20 ">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 ">
-                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                    <div class="flex flex-col items-center mb-5">
-                                        <div class="pb-5">
-                                            <img src="{% static '/img/icons/3.svg' %}" alt="">
-                                        </div>
 
-                                        <h1 class="text-lg card__title dark:text-green transition">Интернет магазин
-                                        </h1>
-                                    </div>
+                                <div class=" border-t w-full flex justify-center border-black border-opacity-20">
+                                    <a href="form"
+                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                        Оставить заявку
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="flex lg:w-1/4 w-100 rounded-lg bg-white relative z-50 text-primary lg:m-3 m-4">
+                            <div class="flex flex-col justify-between items-center w-full p-5">
+
+
+
+                                <div class="pb-5">
+                                    <img src="{% static '/img/icons/3.svg' %}" alt="">
+                                </div>
+                                <div class="div">
+
+                                    <h1 class="text-lg card__title mb-3">Интернет магазин
+                                    </h1>
+                                </div>
+                                <div class="div">
                                     <p
-                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5 transition">
-                                        Позволяет Вашим клиентам
-                                        оплачивать
-                                        товары/услуги
-                                        в любое время и с любой точки мира на Ваш
-                                        корпоративный счет, благодаря
-                                        чему
-                                        продажи компании в онлайн становятся бесперебойными.
+                                        class="text-sm text-center pb-5">
+                                        Разработка интернет магазина позволяет компании продавать товары в веб
+                                        пространстве
+                                        быстро и без затрат времени на консультацию клиентов. Мы имеем более 5 лет опыта
+                                        запуска интернет магазинов различной сложности, начиная от небольших интернет
+                                        магазинов, заканчивая крупными маркетплейсами.
                                     </p>
-
-                                    <div class="flex flex-col w-full items-center mt-5">
-                                        <a href="form"
-                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                            Оставить заявку
-                                        </a>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
+                                <div class=" border-t w-full flex justify-center border-black border-opacity-20">
 
-                    <div
-                        class="flex flex-col rounded-lg shadow-lg overflow-hidden border border-gray border-opacity-20 dark:border-white dark:border-opacity-20 ">
-                        <div class="flex-shrink-0">
-                            <div
-                                class="h-50 w-full text-black relative z-50 dark:bg-primary bg-white  flex flex-col items-center justify-center p-5 ">
-                                <div class="z-60 relative  flex flex-col items-center content-between">
-                                    <div class="flex flex-col items-center mb-5">
-                                        <div class="pb-5">
-                                            <img src="{% static '/img/icons/4.svg' %}" alt="">
-                                        </div>
-
-                                        <h1 class="text-lg card__title dark:text-green transition">Корпоративный
-                                        </h1>
-                                    </div>
-                                    <p
-                                        class="text-sm text-center border-b dark:border-white dark:border-opacity-20 border-black border-opacity-20 dark:text-white pb-5 transition">
-                                        Позволяет Вашим клиентам
-                                        оплачивать
-                                        товары/услуги
-                                        в любое время и с любой точки мира на Ваш
-                                        корпоративный счет, благодаря
-                                        чему
-                                        продажи компании в онлайн становятся бесперебойными.
-                                    </p>
-
-                                    <div class="flex flex-col w-full items-center mt-5">
-                                        <a href="form"
-                                            class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
-                                            Оставить заявку
-                                        </a>
-                                    </div>
+                                    <a href="form"
+                                        class="focus:outline-none underline dark:text-white  py-3 px-5 rounded-full uppercase text-sm tracking-wide text-baclk font-bold hover:bg-red-400 cursor-pointer transition flex items-center ">
+                                        Оставить заявку
+                                    </a>
                                 </div>
+
                             </div>
+
                         </div>
+
                     </div>
                 </div>
-
 
         </section>
 
@@ -408,7 +432,7 @@
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
 
-                <a target="blank" href="https://uzb.kz/">
+                <a target="blank" href="http://uzb.kz/">
                     <img class="rounded-lg hover:opacity-80 transition-all" src="{% static '/img/pholio/2.jpg' %}"></a>
             </div>
 
@@ -428,7 +452,7 @@
                         d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                 </svg>
 
-                <a target="blank" href="https://stia.kz/">
+                <a target="blank" href="http://stia.kz/">
                     <img class="rounded-lg hover:opacity-80 transition-all" src="{% static '/img/pholio/3.jpg' %}"></a>
             </div>
 
@@ -572,9 +596,9 @@
                 что
                 вы получите самую лучшую консультацию!</p>
 
-            <a href="form"
-                class="focus:outline-none py-4 px-6 bg-secondary text-white lg:w-1/1 text-black w-1/1 rounded-lg uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
-                Оставить заявку</a>
+            <a href=" https://wa.me/+77757310715"
+                class="focus:outline-none hover:bg-secondaryLight transition-all py-4 px-6 bg-secondary text-white lg:w-1/1 text-black w-1/1 rounded-lg uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
+                Написать в whatsapp</a>
         </div>
 
 
