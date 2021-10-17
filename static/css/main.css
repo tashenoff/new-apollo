@@ -5,6 +5,13 @@
     /* Путь к файлу со шрифтом */
 }
 
+@font-face {
+    font-family: "rostov";
+    src: url("../fonts/rostov.ttf.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 [x-cloak] {
     display: none !important;
 }
@@ -22,7 +29,6 @@
     padding: 5px;
     border-radius: 10px;
     margin-bottom: 15px;
-    
 }
 
 .home__title {
@@ -152,9 +158,110 @@ nav.scroll {
     content: '';
     width: 100%;
     height: 100%;
-    background-color: rgb(0 0 0 / 49%);
     position: absolute;
     z-index: 40;
+    top: 0;
+    left: 0;
+    background-image: url(https://media3.giphy.com/media/eJoZAwRN9OI5QjthIE/giphy.gif?cid=790b761…&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+}
+
+.img-container {
+    margin-bottom: -50px;
+    border-radius: 46px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 290px;
+}
+
+.skewed {
+    width: 300px;
+    height: 320px;
+    margin: 50px 0 -50px 0;
+    border-radius: 47px;
+    transform: skewY( 15deg);
+    overflow: hidden;
+}
+
+.img-marketing {
+
+    background-image: url("/staticfiles/img/markt.png");
+    background-size: 100%;
+    background-position: center;
+}
+
+.img-design {
+
+    background-image: url("/staticfiles/img/design.jpg");
+    background-size: 100%;
+    background-position: center;
+}
+
+
+.img-code {
+
+    background-image: url("/staticfiles/img/code.jpg");
+    background-size: 100%;
+    background-position: center;
+}
+
+#img{
+    width: 100%;
+    height: 100%;
+    margin-top: -30px;
+    transform: skewY(-15deg);
+    transition: all 0.3s ease;
+
+}
+
+#img:hover {
+    background-size: 110%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.content {
+    width: 100%;
+    padding-top: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h2 {
+    font-size: 25px;
+    color: #353535;
+    letter-spacing: 0.07em;
+    font-family: 'Lobster', cursive;
+}
+
+.content p {
+    font-size: 16px;
+    margin-top: 1px;
+    color: #353535;
+}
+
+
+
+.home:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+    position: absolute;
+    z-index: 38;
     top: 0;
     left: 0;
 }
