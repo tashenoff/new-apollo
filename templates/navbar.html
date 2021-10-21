@@ -48,7 +48,7 @@
                         <li class="mr-3">
                             <a href="{% url 'main:index' %}"
                                 class="cursor-pointer inline-block py-2 px-2  no-underline">
-                                Главная</a>
+                               <i>s</i> Главная</a>
                             </a>
                         </li>
                         <li class="mr-3">
@@ -62,6 +62,13 @@
                             <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                                 @click="$scroll('#folio'), isOpen = false">
                                 Наши работы
+                            </a>
+                        </li>
+
+                        <li class="mr-3">
+                            <a class="cursor-pointer animate-pulse inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
+                                @click="$scroll('#sale'), isOpen = false">
+                                Акция недели
                             </a>
                         </li>
 

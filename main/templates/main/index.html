@@ -7,7 +7,47 @@
 {% block content %}
 
 
-
+<script>
+    function sale() {
+        return {
+            seconds: '00',
+            minutes: '00',
+            hours: '00',
+            days: '00',
+            distance: 0,
+            countdown: null,
+            beerTime: new Date('october 28, 2021 22:09:00').getTime(),
+            now: new Date().getTime(),
+            start: function () {
+                this.countdown = setInterval(() => {
+                    // Calculate time
+                    this.now = new Date().getTime();
+                    this.distance = this.beerTime - this.now;
+                    // Set Times
+                    this.days = this.padNum(Math.floor(this.distance / (1000 * 60 * 60 * 24)));
+                    this.hours = this.padNum(Math.floor((this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+                    this.minutes = this.padNum(Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60)));
+                    this.seconds = this.padNum(Math.floor((this.distance % (1000 * 60)) / 1000));
+                    // Stop
+                    if (this.distance < 0) {
+                        clearInterval(this.countdown);
+                        this.days = '00';
+                        this.hours = '00';
+                        this.minutes = '00';
+                        this.seconds = '00';
+                    }
+                }, 100);
+            },
+            padNum: function (num) {
+                var zero = '';
+                for (var i = 0; i < 2; i++) {
+                    zero += '0';
+                }
+                return (zero + num).slice(-2);
+            }
+        }
+    }
+</script>
 <section id="home"
     class="text-white dark:bg-primary dark:text-white home w-full relative overflow-hidden flex flex-col items-center ">
 
@@ -28,8 +68,9 @@
                 <h1 class="home__title lg:text-8xl text-3x1 mb-5 ">Создание сайтов</br> в Астане</h1>
                 <h2 class="lg:text-2xl text-1x1 lg:p-0 p-5">Закажите сайт, продуманный с технической и маркетинговой
                     точки зрения</h2>
+                    
                 <a href="form"
-                    class="focus:outline-none py-4 hover:bg-secondaryLight transition-all px-6 bg-red dark:bg-green dark:text-black text-white lg:w-1/1 text-black w-1/1 rounded-lg mt-5 uppercase text-sm tracking-wide font-bold cursor-pointer transition ">
+                    class="focus:outline-none py-4 bg-secondary hover:bg-secondaryLight transition-all px-6 text-white  text-black rounded-lg mt-5 uppercase text-sm tracking-wide font-bold cursor-pointer ">
                     Оставить заявку</a>
 
             </div>
@@ -66,12 +107,18 @@
 <section id="about" class="dark:bg-primary py-20 h-full ">
     <div class="container  mx-auto">
         <div class="flex flex-col items-center w-full">
-            <h1
-                class="home__sub-title text-5xl text-center bg-clip-text text-transparent bg-gradient-to-br dark:from-green from-black to-primary dark:to-blueLight p-2">
-                Ключевые направления</h1>
+            <div class="mt-5 flex items-center flex-col text-center">
+                <h1 class="uppercase font-bold text-base lg:text-lg"> Хотите заказать сайт в астане у надежной компании?
+                </h1>
+                <h2 class="lg:text-4xl mt-5 text-3x1 home__sub-title"> Немного о нас</h2>
+
+            </div>
+
+
             <div class="w-10 h-1 bg-secondary mt-5"></div>
-            <p class="lg:px-0 px-5 py-10 w-full text-center dark:text-white text-black">
-                С 2016 года <b>веб студия Apollo</b> помогает малому и среднему бизнесу в создании сайтов для
+            <p class="py-10 px-5 lg:w-full w-full text-center lg:text-2xl text-lg ">
+                С 2016 года <b>студия создания сайтов в Астане</b> Apollo помогает малому и среднему бизнесу в создании
+                сайтов для
                 продвижения бизнеса
                 в интернете. Для наших специалистов главное - понимать цели заказчика, чтобы предложить инструменты для
                 достижения максимально возможного результата. Мы имеем опыт работы в различных отраслях: от магазинов и
@@ -168,15 +215,17 @@
     <div class="pt-20">
         <div class="flex flex-col items-center text-center relative">
             <div
-                class="w-20 h-20 p-1 bg-white dark:bg-blueLight rounded-full shadow-xl flex items-center justify-center">
-                <span class="text-4xl">💪</span>
+                class="w-20 h-20 text-primary p-1 bg-white dark:bg-blueLight rounded-full shadow-xl flex items-center justify-center">
+                <span class="text-4xl"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  </svg></span>
             </div>
             <div class="mt-5 flex items-center flex-col">
-                <span class="uppercase">Наши услуги</span>
-                <h1 class="lg:text-4xl mt-5 text-3x1 home__sub-title">Что мы предлагаем</h1>
-                <div class="w-10 h-1 bg-secondary mt-10"></div>
+                <h1 class="uppercase font-bold">Разработка сайтов по передовым технологиям</h1>
+                <span class="lg:text-4xl mt-5 text-3x1 home__sub-title">Наши услуги</span>
+                <div class="w-10 h-1 bg-secondary lg:mt-10 mt-5"></div>
             </div>
-            <p class="w-full py-10">Предлагаем полный спектр услуг в области интернет-маркетинга для малого, среднего и
+            <p class="py-10 px-5 lg:w-1/2 w-full text-center lg:text-2xl text-lg ">Предлагаем полный спектр услуг в области интернет-маркетинга для малого, среднего и
                 крупного бизнеса по всему Казахстану.
             </p>
         </div>
@@ -383,6 +432,77 @@
 </section>
 
 
+<section id="sale" class="bg-fixed py-20 text-black bg-red mb-20 overflow-hidden bg-sale relative flex items-center flex-col ">
+
+    <div class="background absolute w-full top-0 left-0 z-50">
+        <div class="star1 star"></div>
+        <div class="star2 star"></div>
+        <div class="star3 star"></div>
+        <div class="star4 star"></div>
+    </div>
+
+    <div class="container mx-auto relative z-50 text-white">
+
+
+        <div class="flex flex-col items-center w-full">
+
+            <div
+                class="w-20 h-20 mb-10 p-1 bg-white text-primary dark:bg-blueLight rounded-full shadow-xl flex items-center justify-center">
+                <span class="text-4xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                      </svg>
+                </span>
+            </div>
+
+            <h1 class="lg:text-4xl text-3x1 home__sub-title">Ация недели!</h1>
+            <p class="py-10 px-5 lg:w-1/2 w-full text-center  lg:text-2xl text-lg ">Только для вас, каждую неделю мы обьявляем
+                выгодные и интересные предложения
+            </p>
+
+            <a href=" https://wa.me/+77027245503?text=Я хочу бесплатный логотип"
+                class="focus:outline-none hover:bg-secondaryLight transition-all py-4 px-6 bg-secondary text-white lg:w-1/1 text-black w-1/1 rounded-lg uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
+                бесплатная разработка логотипа</a>
+
+
+
+            <div class="mt-10 flex flex-col items-center">
+                <h1 class=" text-center mb-3 font-extralight">Акция обновится через:</h1>
+
+                <div class="flex mb-10" x-data="sale()" x-init="start()">
+                    <div
+                        class="text-3xl text-center w-20 lg:mx-2 mx-1 p-2  rounded-lg border border-white border-opacity-20">
+                        <span class="font-mono leading-none" x-text="days"></span>
+                        <div class="font-mono uppercase text-sm leading-none pt-3">Дней</div>
+                    </div>
+                    <div
+                        class="text-3xl text-center w-20 lg:mx-2 mx-1 p-2 rounded-lg border border-white border-opacity-20">
+                        <span class="font-mono leading-none" x-text="hours"></span>
+                        <div class="font-mono uppercase text-sm leading-none pt-3">Часов</div>
+                    </div>
+                    <div
+                        class="text-3xl text-center w-20 lg:mx-2 mx-1 p-2 rounded-lg border border-white border-opacity-20">
+                        <span class="font-mono leading-none" x-text="minutes"></span>
+                        <div class="font-mono uppercase text-sm leading-none pt-3">Минут</div>
+                    </div>
+                    <div
+                        class="text-3xl text-center w-20 lg:mx-2 mx-1 p-2 rounded-lg border border-white border-opacity-20">
+                        <span class="font-mono leading-none" x-text="seconds"></span>
+                        <div class="font-mono uppercase text-sm leading-none pt-3">Секунд</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+    </div>
+    <button @click="isDialogOpen = true" class="absolute bottom-5 z-50 text-white">Условия акции</button>
+    
+</section>
+
 
 
 <section id="folio" class="bg-off dark:bg-primary mb-20">
@@ -584,12 +704,12 @@
         <div class="flex flex-col items-center w-full pb-10">
 
             <h1 class="lg:text-4xl text-3x1 home__sub-title">Остались вопросы?</h1>
-            <p class="py-10 px-5 lg:w-1/2 w-full text-center sub-title ">Оставьте свои контактные данные и мы
+            <p class="py-10 px-5 lg:w-1/2 w-full text-center  lg:text-2xl text-lg  ">Оставьте свои контактные данные и мы
                 гарантируем вам,
                 что
                 вы получите самую лучшую консультацию!</p>
 
-            <a href=" https://wa.me/+77757310715"
+            <a href=" https://wa.me/+77027245503"
                 class="focus:outline-none hover:bg-secondaryLight transition-all py-4 px-6 bg-secondary text-white lg:w-1/1 text-black w-1/1 rounded-lg uppercase text-sm tracking-wide font-bold hover:bg-green-400 cursor-pointer transition ">
                 Написать в whatsapp</a>
         </div>
@@ -598,6 +718,8 @@
 
     </div>
 </section>
+
+
 
 
 </div>
