@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'banner.html' with h='90vh' title='Наше портфолио' subtitle="Все, что Вы хотели знать по запуску и масштабированию Ваших бизнес-проектов в интернет." img='https://images.unsplash.com/photo-1529243856184-fd5465488984?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1969&q=80'%}
+
+<div class=" h-full">
+    <div class="container mx-auto pt-5">
+        <div class="grid grid-cols-1 lg:grid-cols-3  gap-4">
+
+            {% for folio in folios %}
+            <div x-data="{ open: false }" @mouseout="open = false" @mouseover="open = true"
+            class="relative text-white bg-primary rounded-lg">
+            <span
+                class="absolute bottom-0 z-50 bg-primary w-full p-5 bg-opacity-30 uppercase text-sm tracking-widest rounded-b-lg">
+                {{ folio.folio_name }}
+            </span>
+
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 absolute top-5 transition-all z-50 right-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+
+            <a target="blank" rel="nofollow" href="http://uzb.kz/">
+                {% if folio.folio_image %}
+                <img class="rounded-lg hover:opacity-80 transition-all h-96 w-full object-cover" src="{{folio.folio_image.url}}"></a>
+                {% endif %}
+        </div>
+
+        {% endfor %}
+
+           
+             
+             
+           
+           
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -9,7 +9,7 @@
         x-data="{ atTop: true }" :class="{ 'bg-primary bg-opacity-90 ' : !atTop }"
         @scroll.window="atTop = (window.pageYOffset > 40) ? false : true">
         <div class="navbar w-full flex justify-center dark:text-white">
-            <nav class="flex items-center lg:px-0 px-2 justify-between relative z-40 flex-wrap py-6 fixed w-full top-0"
+            <nav class="flex items-center lg:px-0 px-2 justify-between relative z-40 flex-wrap lg:py-6 py-3 fixed w-full top-0"
                 x-data="{ isOpen: false }" @keydown.escape="isOpen = false"
                 :class="{ 'shadow-lg bg-transparent' : isOpen }">
 
@@ -23,7 +23,7 @@
                 <div class="lg:hidden block font-bold ">
 
 
-                    <a href="tel:87757310715">8 775 731-07-15</a>
+                    <a href="tel:87761604911">8 776 160-49-11</a>
 
                 </div>
 
@@ -65,12 +65,12 @@
                             </a>
                         </li>
 
-                        <li class="mr-3">
+                        <!-- <li class="mr-3">
                             <a class="cursor-pointer animate-pulse inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
                                 @click="$scroll('#sale'), isOpen = false">
                                 Акция недели
                             </a>
-                        </li>
+                        </li> -->
 
                         <!-- <li class="mr-3">
                             <a class="cursor-pointer inline-block  no-underline hover:text-gray-200 hover:text-underline py-2 px-2"
@@ -114,7 +114,7 @@
                 <div class="flex items-center dark:text-white">
 
 
-                    <a href="tel:87757310715">8 775 731-07-15</a>
+                    <a href="tel:87761604911">8 776 160-49-11</a>
 
                 </div>
             </div>

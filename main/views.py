@@ -33,6 +33,9 @@ def form(request):
 def index(request):
     return render(request, 'main/index.html')
 
+def landing(request):
+    return render(request, 'main/Landing-page.html')
+
 def thanksForm(request):
     return render(request, 'main/thanks.html')
 

@@ -34,6 +34,7 @@ LOCAL_APPS = [
     'article',
     'ckeditor',
     'readtime',
+    'folio'
 ]
 
 REST_FRAMEWORK = {

@@ -14,12 +14,13 @@
     {% endblock %}
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="{% static 'css/main.css' %}" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jura&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@1.2.x/dist/scroll.min.js"
         defer></script>
     <script type="text/javascript" src="{% static 'js/main.js' %}" defer></script>
-
-
+    <meta name="title" content="Создание сайтов Астана (Нурсултан) Apollo.kz">
+    <meta name="description"
+        content="Создание сайтов в Астане - Apollo.kz. Заказать создание сайта Астана. ☎ +7 7761604911. Разработка сайтов Астана (Нур-Султан). Сайты под ключ">
     <title>😎Apollo.kz - создание сайтов в Астане</title>
 
 
@@ -46,51 +47,63 @@
         </svg>
     </div> -->
 
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript" >
-  (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-  m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-  (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-  ym(85965704, "init", {
-       clickmap:true,
-       trackLinks:true,
-       accurateTrackBounce:true,
-       webvisor:true
-  });
-</script>
+        ym(85965704, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
 
-<noscript><div><img src="https://mc.yandex.ru/watch/85965704" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-41VR65JJRD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-41VR65JJRD');
-</script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/85965704" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 
 
-<meta name="google-site-verification" content="h6GsWYhCsifdgVVpZWBM5-4z2GB9UMmTIyJPNwLMWzY" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-41VR65JJRD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-41VR65JJRD');
+    </script>
+
+
+    <meta name="google-site-verification" content="h6GsWYhCsifdgVVpZWBM5-4z2GB9UMmTIyJPNwLMWzY" />
 
 </head>
 
-<body x-data="{ 'isDialogOpen': false, 'darkMode': false }" @keydown.escape="isDialogOpen = false" x-init="
-darkMode = JSON.parse(localStorage.getItem('darkMode'));
-$watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(value)))">
-    <div :class="{'dark': darkMode === true}">
-        <div class="bg-gray dark:bg-primary dark:text-white text-black">
-            {% include 'navbar.html' %}
-            {% include 'modal.html' %}
-            {% block content %}
-            {% endblock content %}
-            {% include 'footer.html' %}
-        </div>
+<body class="bg-gray flex flex-col h-full" x-data="{ 'isDialogOpen': false, 'darkMode': false }"
+    @keydown.escape="isDialogOpen = false">
+
+    <div style=" flex: 1 0 auto;">
+
+
+        {% include 'navbar.html' %}
+
+
+
+        {% include 'modal.html' %}
+        {% block content %}
+        {% endblock content %}
+
+
+
     </div>
+
+    {% include 'footer.html' %}
+
 </body>
 
 </html>

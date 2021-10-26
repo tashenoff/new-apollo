@@ -1,4 +1,22 @@
-<div class="bg-primary h-screen text-4xl text-white flex items-center justify-center">
-   <h1 class="home__title lg:text-8xl text-3x1 mb-5 lowercase">БЛОГ О ВЕБ-РАЗРАБОТКЕ И ВЕБ-ТЕХНОЛОГИЯХ</h1> 
+<div style="background-image: url({{ img }}); height:{{ h }}" class="bg-primary h-96 text-4xl text-white flex flex-col items-center justify-center relative">
+   <h1 class="home__title lg:text-8xl text-3x1 mb-5 lowercase">{{ title }}</h1> 
+   <h2>{{ subtitle }}</h2>
+
+
+   
+   <div
+   class="absolute bottom-10 z-50 border-t border-white absolute border-opacity-25 w-full flex items-center flex-col justify-center">
+   <div
+       class="p-5 transform rotate-45 border border-white border-opacity-25 relative -top-5 bg-primary flex items-center justify-center">
+       <div class="transform -rotate-45 absolute z-50">
+           <svg @click="$scroll('#about')" xmlns="http://www.w3.org/2000/svg"
+               class="h-4 w-4 text-white  cursor-pointer  animate-bounce" fill="none" viewBox="0 0 24 24"
+               stroke="currentColor">
+               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                   d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+           </svg>
+       </div>
+   </div>
+</div>
    
 </div>

@@ -8,6 +8,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls', namespace = 'main')),
     path('form/', include('main.urls', namespace = 'form')),
+    path('landing-page/', include('main.urls', namespace = 'landing-page')),
+
+    
+    path('portfolio/', include('folio.urls', namespace = 'folio')),
     path('home/', include('home.urls', namespace = 'home')),
     path('articles/', include('article.urls', namespace = 'article')), # нужен рефакторинг
 
