@@ -9,7 +9,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 # Application definition
 
@@ -116,7 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/staticfiles/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
@@ -146,7 +151,7 @@ except ImportError:
 
 EMAIL_BACKEND  = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.kz'
-RECIPIENTS_EMAIL = ['alisher_bu@mail.ru', 'wmiracle@inbox.ru', 'Clinkz1994@gmail.com'] 
+RECIPIENTS_EMAIL = ['wmiracle@inbox.ru', 'clinkz1994@gmail.com'] 
 DEFAULT_FROM_EMAIL = 'abay@intermedia.kz'
 EMAIL_HOST_USER = 'abay@intermedia.kz'
 EMAIL_HOST_PASSWORD = 'ncrzwhroaytzupdz'
