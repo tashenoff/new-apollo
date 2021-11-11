@@ -9,15 +9,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'apollo.kz', 'www.apollo.kz']
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'apollo_db',
-#         'USER': 'apollo_db_admin',
-#         'PASSWORD': 'ESQzD3rLK1v',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#     }
-# }
+
 
 

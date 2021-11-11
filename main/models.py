@@ -51,7 +51,6 @@ def send_email_new_order(sender, instance, created, **kwargs):
         name = instance.сustomer.firstName
         phone = instance.сustomer.phone
         service = instance.main_service.main_service_name
-        print(service)
 
         subject = 'Новый заказа с сайта apollo --- Имя: {0}, Номер телефона: {1}, Услуга: {2}'.format(name, phone, service)
         message = 'Новый заказ\n'
